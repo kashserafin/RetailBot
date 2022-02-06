@@ -8,7 +8,7 @@ namespace RetailBot.Services
     {
         OrchestratorRecognizer Dispatch { get; }
 
-        LuisRecognizer LuisRetailBot { get; }
+        LuisRecognizer LuisDisplayBotTwo { get; }
 
         LuisRecognizer LuisGeneral { get; }
 

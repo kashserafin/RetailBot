@@ -9,7 +9,7 @@ namespace RetailBot.Services
     {
         public OrchestratorRecognizer Dispatch { get; private set; }
 
-        public LuisRecognizer LuisRetailBot { get; private set; }
+        public LuisRecognizer LuisDisplayBotTwo { get; private set; }
 
         public LuisRecognizer LuisGeneral { get; private set; }
 
@@ -20,7 +20,7 @@ namespace RetailBot.Services
             // Read the setting for cognitive services (LUIS, QnA) from the appsettings.json
             // If includeApiResults is set to true, the full response from the LUIS api (LuisResult)
             // will be made available in the properties collection of the RecognizerResult
-            LuisRetailBot = CreateLuisRecognizer(configuration, "LuisRetailBot");
+            LuisDisplayBotTwo = CreateLuisRecognizer(configuration, "LuisDisplayBotTwo");
             LuisGeneral = CreateLuisRecognizer(configuration, "LuisGeneral");
 
             Dispatch = dispatcher;

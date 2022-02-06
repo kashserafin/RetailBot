@@ -61,7 +61,7 @@ namespace RetailBot.Dialogs
             switch (orchestratorTopIntent)
             {
                 case "DISPLAY_BOT_TWO":
-                    recognizerResult = await _botServices.LuisRetailBot.RecognizeAsync(stepContext.Context, cancellationToken);
+                    recognizerResult = await _botServices.LuisDisplayBotTwo.RecognizeAsync(stepContext.Context, cancellationToken);
                     break;
                 case "GENERAL":
                     recognizerResult = await _botServices.LuisGeneral.RecognizeAsync(stepContext.Context, cancellationToken);
@@ -87,7 +87,7 @@ namespace RetailBot.Dialogs
                     await stepContext.Context.SendActivityAsync(MessageFactory.Text("Cancelling... "), cancellationToken);
                     await stepContext.Context.SendActivityAsync(MessageFactory.Text("What can I do for you? "), cancellationToken);
 
-                    return await stepContext.ReplaceDialogAsync($"{nameof(MainDialog)}.mainFlow", null, cancellationToken);
+                    return await stepContext.CancelAllDialogsAsync(cancellationToken);
                 case Constans.Intents.CheckOrderStatus:
                     var trackingNumber = entities.TrackingNumber?.FirstOrDefault();
                     conversationData.TrackingNumber = trackingNumber != null ? trackingNumber : conversationData.TrackingNumber;
