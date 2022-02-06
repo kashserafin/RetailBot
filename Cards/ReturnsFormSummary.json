@@ -1,0 +1,251 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "Return summary"
+    },
+    {
+      "type": "Container",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "First name",
+                  "wrap": true,
+                  "color": "Default",
+                  "fontType": "Default"
+                }
+              ],
+              "verticalContentAlignment": "Center"
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "verticalContentAlignment": "Center",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "wrap": true,
+                  "text": "${FirstName}"
+                }
+              ],
+              "style": "emphasis"
+            }
+          ]
+        }
+      ],
+      "separator": true,
+      "spacing": "Medium"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Last name",
+              "wrap": true
+            }
+          ],
+          "verticalContentAlignment": "Center"
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${LastName}",
+              "wrap": true
+            }
+          ],
+          "verticalContentAlignment": "Center",
+          "style": "emphasis"
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Order number",
+              "wrap": true
+            }
+          ],
+          "verticalContentAlignment": "Center"
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${OrderNumber}",
+              "wrap": true
+            }
+          ],
+          "verticalContentAlignment": "Center",
+          "style": "emphasis"
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Items to return",
+              "wrap": true
+            }
+          ],
+          "backgroundImage": {
+            "verticalAlignment": "Center"
+          },
+          "verticalContentAlignment": "Center"
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "verticalContentAlignment": "Center",
+          "style": "good",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${Items}",
+              "wrap": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Date of submission",
+              "wrap": true
+            }
+          ],
+          "verticalContentAlignment": "Center"
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "backgroundImage": {
+            "verticalAlignment": "Center"
+          },
+          "style": "good",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${DateOfSubmission}",
+              "wrap": true,
+              "horizontalAlignment": "Center"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "wrap": true,
+      "separator": true,
+      "spacing": "Medium",
+      "text": "Please send the items to the following shipping address:"
+    },
+    {
+      "type": "TextBlock",
+      "text": "FICTIOUS",
+      "wrap": true,
+      "size": "Default",
+      "weight": "Bolder",
+      "color": "Accent"
+    },
+    {
+      "type": "TextBlock",
+      "text": "1325 Baker Avenue",
+      "wrap": true,
+      "spacing": "None",
+      "size": "Default",
+      "weight": "Bolder",
+      "color": "Accent"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Cummings KS 66016",
+      "wrap": true,
+      "spacing": "None",
+      "size": "Default",
+      "weight": "Bolder",
+      "color": "Accent"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.ShowCard",
+          "title": "How long do I have to return the items?",
+          "card": {
+            "type": "AdaptiveCard",
+            "body": [
+              {
+                "type": "TextBlock",
+                "text": "You have 14 days to deliver the product to our warehouse. Returns delivered after this date will not be processed.",
+                "wrap": true
+              }
+            ]
+          }
+        }
+      ],
+      "spacing": "Large",
+      "separator": true
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.ShowCard",
+          "title": "When can I expect my refund?",
+          "card": {
+            "type": "AdaptiveCard",
+            "body": [
+              {
+                "type": "TextBlock",
+                "text": "The amount due will be refunded in the same form of payment as was used for the purchase within a maximum of 14 days, depending on the bank.",
+                "wrap": true
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.3"
+}

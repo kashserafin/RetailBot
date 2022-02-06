@@ -1,0 +1,199 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.3",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "backgroundImage": {
+            "verticalAlignment": "Bottom",
+            "horizontalAlignment": "Center"
+          },
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Order status",
+              "wrap": true,
+              "size": "Medium",
+              "weight": "Bolder"
+            }
+          ],
+          "verticalContentAlignment": "Center"
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${OrderStatus[0].Status}",
+              "wrap": true,
+              "horizontalAlignment": "Right",
+              "size": "Large",
+              "color": "Good",
+              "weight": "Bolder"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "separator": true,
+      "columns": [
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Tracking number",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "text": "Latest update",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "text": "Carrier",
+              "wrap": true,
+              "isSubtle": false
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${TrackingNumber}",
+              "wrap": true,
+              "horizontalAlignment": "Right"
+            },
+            {
+              "type": "TextBlock",
+              "text": "${OrderStatus[0].Date}",
+              "wrap": true,
+              "horizontalAlignment": "Right"
+            },
+            {
+              "type": "TextBlock",
+              "text": "${Carrier}",
+              "wrap": true,
+              "horizontalAlignment": "Right"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "spacing": "None",
+      "columns": [
+        {
+          "type": "Column",
+          "width": 1,
+          "items": [
+            {
+              "type": "TextBlock",
+              "size": "ExtraLarge",
+              "color": "Accent",
+              "text": "${Sender[0].Name}",
+              "spacing": "None",
+              "wrap": true
+            }
+          ],
+          "horizontalAlignment": "Left",
+          "verticalContentAlignment": "Center"
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://media.istockphoto.com/vectors/fast-delivery-truck-icon-fast-shipping-design-for-website-and-mobile-vector-id1302438914?k=20&m=1302438914&s=170667a&w=0&h=8HroNF2rhDbQCruNiN6ExIbplmIIMcD3vmFN6Z2CZNU=",
+              "size": "Large",
+              "spacing": "None"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": 1,
+          "items": [
+            {
+              "type": "TextBlock",
+              "size": "ExtraLarge",
+              "color": "Accent",
+              "text": "${Recipient[0].Name}",
+              "horizontalAlignment": "Right",
+              "spacing": "None",
+              "wrap": true
+            }
+          ],
+          "verticalContentAlignment": "Center"
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": 1,
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${Sender[0].Street}",
+              "isSubtle": true,
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "text": "${Sender[0].City}, ${Sender[0].State}",
+              "isSubtle": true,
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": 1,
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${Recipient[0].Street}",
+              "horizontalAlignment": "Right",
+              "isSubtle": true,
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "text": "${Recipient[0].City}, ${Recipient[0].State}",
+              "horizontalAlignment": "Right",
+              "isSubtle": true,
+              "wrap": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Your order is on its way!",
+      "wrap": true,
+      "size": "Default",
+      "spacing": "Large",
+      "horizontalAlignment": "Center",
+      "separator": true
+    }
+  ]
+}

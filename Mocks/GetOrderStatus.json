@@ -1,0 +1,55 @@
+{
+  "TrackingNumber": "123456",
+  "Carrier": "DHL",
+  "CarrierLogo": "https://logodownload.org/wp-content/uploads/2015/12/dhl-logo-2.png",
+  "Sender": [
+    {
+      "Name": "Fictitious",
+      "Street": "1325 Baker Avenue",
+      "City": "Cummings",
+      "State": "Kansas",
+      "PhoneNumber": "817-904-4670",
+      "ZipCode": "66016"
+    }
+  ],
+  "Recipient": [
+    {
+      "Name": "Jane Doe",
+      "Street": "2048 Ford Street",
+      "City": "San Jose",
+      "State": "California",
+      "PhoneNumber": "408-517-9914",
+      "ZipCode": "95129"
+    }
+  ],
+  "OrderStatus": [
+    {
+      "Date": "2022-02-01",
+      "Status": "Out for Delivery"
+    },
+    {
+      "Date": "2022-01-30",
+      "Status": "In Depot"
+    },
+    {
+      "Date": "2022-01-30",
+      "Status": "Collected from Sender"
+    }
+  ],
+  "OrderItems": [
+    {
+      "SKU": "BRA-3026",
+      "Color": "BLACK",
+      "Size": "M",
+      "Quantity": 1,
+      "Price": 100
+    },
+    {
+      "SKU": "BRA-3050",
+      "Color": "RED",
+      "Size": "M",
+      "Quantity": 1,
+      "Price": 120
+    }
+  ]
+}

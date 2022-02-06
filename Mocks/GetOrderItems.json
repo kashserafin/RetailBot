@@ -1,0 +1,31 @@
+{
+  "OrderNumber": "US1234",
+  "DateOfDelivery": "2022-02-01",
+  "OrderRecipient": [
+    {
+      "Name": "Jane",
+      "Surname": "Doe",
+      "Street": "2048 Ford Street",
+      "City": "San Jose",
+      "State": "California",
+      "PhoneNumber": "408-517-9914",
+      "ZipCode": "95129"
+    }
+  ],
+  "OrderItems": [
+    {
+      "SKU": "BRA-3026",
+      "Color": "BLACK",
+      "Size": "M",
+      "Quantity": 1,
+      "Price": 100
+    },
+    {
+      "SKU": "BRA-3050",
+      "Color": "RED",
+      "Size": "M",
+      "Quantity": 1,
+      "Price": 120
+    }
+  ]
+}

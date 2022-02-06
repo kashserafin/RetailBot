@@ -1,0 +1,78 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "Returns form (1/2)"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Please provide your order details. In the next step, we'll retrieve the ordered items and ask which ones you'd like to return.",
+      "wrap": true
+    },
+    {
+      "type": "Container",
+      "separator": true,
+      "spacing": "Medium",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "Input.Text",
+                  "placeholder": "Jane",
+                  "label": "First name",
+                  "isRequired": true,
+                  "errorMessage": "You must provide your first name",
+                  "id": "name"
+                }
+              ]
+            },
+            {
+              "type": "Column",
+              "width": "stretch",
+              "items": [
+                {
+                  "type": "Input.Text",
+                  "placeholder": "Doe",
+                  "errorMessage": "You must provide your last name",
+                  "label": "Last name",
+                  "id": "surname",
+                  "isRequired": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "Input.Text",
+          "placeholder": "US1234",
+          "isRequired": true,
+          "errorMessage": "A valid order number consists of 2 letters and 4 digits, ex. US1234",
+          "label": "Order number",
+          "id": "order_number",
+          "regex": "^[A-Z]{2}[0-9]{4}$"
+        }
+      ]
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Submit"
+        }
+      ],
+      "spacing": "Medium",
+      "separator": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.3"
+}

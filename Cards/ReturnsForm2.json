@@ -1,0 +1,71 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "Returns form (2/2)"
+    },
+    {
+      "type": "Input.Toggle",
+      "wrap": true,
+      "value": "true",
+      "isRequired": true,
+      "errorMessage": "You must agree in order to submit the returns form",
+      "title": "I, the undersigned, hereby give notice of my withdrawal from the sales contract for order number ${OrderNumber}.",
+      "id": "consent",
+      "spacing": "Medium",
+      "label": "Consent"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${OrderRecipient[0].Name} ${OrderRecipient[0].Surname}",
+      "wrap": true,
+      "horizontalAlignment": "Right",
+      "weight": "Default"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "choices": [
+        {
+          "$data": "${$root['OrderItems']}",
+          "title": "${SKU}",
+          "value": "${SKU}"
+        }
+      ],
+      "isMultiSelect": true,
+      "isRequired": true,
+      "errorMessage": "You didn't select any items",
+      "label": "Return items",
+      "separator": true,
+      "spacing": "Medium",
+      "id": "items",
+      "style": "expanded"
+    },
+    {
+      "type": "TextBlock",
+      "text": "What's the reason for your return?",
+      "wrap": true
+    },
+    {
+      "type": "Input.Text",
+      "placeholder": "Your feedback is very important to us!",
+      "isMultiline": true,
+      "id": "feedback"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "title": "Submit"
+        }
+      ],
+      "spacing": "Medium",
+      "separator": true
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.3"
+}
