@@ -1,6 +1,12 @@
 ﻿# RetailBot
 
-Bot Framework v4 echo bot sample.
+This bot is an example of a bot for retail domain. It has the following capabilities:
+- browse bestsellers,
+- check order status,
+- return product,
+- get in touch,
+- get help,
+- cancel
 
 This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to create a simple bot that accepts input from the user and echoes it back.
 
