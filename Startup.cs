@@ -91,8 +91,6 @@ namespace RetailBot
                 {
                     endpoints.MapControllers();
                 });
-
-            // app.UseHttpsRedirection();
         }
 
         private OrchestratorRecognizer InitializeOrchestrator()
